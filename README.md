@@ -14,10 +14,14 @@ and thats it.
 
 More Functions Info:
 GameFunc.freeze(seconds): Freeze the game with the amount of [seconds]
+
 GameFunc.play_sound(): plays a sound without cutting off, make sure to add .stream after the AudioStreamPlayer node name, example: GameFunc.play_sound($Explosion.stream) (Explosion is AudioStreamPlayer, nodes name)
+
 GameFunc.quit(seconds): quits the game after [seconds] amount of time, set to 0 to be instant.
 
 HITBOX FUNCTIONS:
 knockback(dirx,diry): sets the openent velocity.x to dirx and velocity.y to diry
+
 damage(damage): reduces health by [damage] amount of health and displays it.
+
 flash(boolean): flashes the character by 0.05 seconds, if the boolean is true, plays a default hitsound, set it to false to not play anything.
