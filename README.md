@@ -20,3 +20,4 @@ GameFunc.quit(seconds): quits the game after [seconds] amount of time, set to 0 
 HITBOX FUNCTIONS:
 knockback(dirx,diry): sets the openent velocity.x to dirx and velocity.y to diry
 damage(damage): reduces health by [damage] amount of health and displays it.
+flash(boolean): flashes the character by 0.05 seconds, if the boolean is true, plays a default hitsound, set it to false to not play anything.
