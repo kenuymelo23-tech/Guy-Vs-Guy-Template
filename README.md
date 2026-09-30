@@ -32,4 +32,5 @@ damage(damage): reduces health by [damage] amount of health and displays it.
 flash(boolean): flashes the character by 0.05 seconds, if the boolean is true, plays a default hitsound, set it to false to not play anything.
 
 Misc:
+
 dir: it is the general sprite2d direction towards the opponent, great for knockback() or velocity
