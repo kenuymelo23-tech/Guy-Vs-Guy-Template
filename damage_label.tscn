@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://darhh4ael0juo"]
+
+[ext_resource type="Script" uid="uid://ddn5j3savkdja" path="res://damage_label.gd" id="2_iilxk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iprbo"]
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="damage" type="Node2D" unique_id=1421002664]
+process_mode = 3
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_iilxk")
+
+[node name="DamageLabel" type="Label" parent="." unique_id=114785759]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "damage!"
+label_settings = SubResource("LabelSettings_iprbo")

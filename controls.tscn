@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dlepu08osav5t"]
+
+[ext_resource type="Texture2D" uid="uid://dax2gs3d26wkp" path="res://icon.svg" id="1_gpdjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
+size = Vector2(120, 120)
+
+[node name="Controls" type="VirtualJoystick" unique_id=1950044574]
+process_mode = 3
+modulate = Color(1, 1, 1, 0.10980392)
+offset_left = 281.42862
+offset_top = 681.4286
+offset_right = 321.42862
+offset_bottom = 721.4286
+scale = Vector2(2.4, 2.4)
+action_left = &"left"
+action_right = &"right"
+action_up = &"up"
+action_down = &"down"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=943393293]
+position = Vector2(95.833305, 1.7857127)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_gpdjo")
+shape = SubResource("RectangleShape2D_gyc6d")
+action = "ability1"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="." unique_id=460126143]
+position = Vector2(145.83331, 4.7619095)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_gpdjo")
+shape = SubResource("RectangleShape2D_gyc6d")
+action = "ability2"
