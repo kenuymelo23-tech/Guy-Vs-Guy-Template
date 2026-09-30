@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cwb74drrfvu4o"]
+
+[sub_resource type="SystemFont" id="SystemFont_gyc6d"]
+
+[resource]
+font = SubResource("SystemFont_gyc6d")
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
