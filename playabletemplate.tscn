@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d4eqpfs3nekp1" path="res://assets/dummy.png" id="3_yg8pl"]
 [ext_resource type="LabelSettings" uid="uid://cwb74drrfvu4o" path="res://fonts/LabelFont.tres" id="4_15yws"]
 [ext_resource type="AudioStream" uid="uid://cr1gcyxmeyg5q" path="res://assets/concrete1.wav" id="5_jd6ib"]
+[ext_resource type="Texture2D" uid="uid://c2w0ip8371bya" path="res://assets/HealthBarHollow.png" id="5_yg8pl"]
+[ext_resource type="Texture2D" uid="uid://d4jpqcremopgn" path="res://assets/HealthBarFill.png" id="6_15yws"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2v67"]
 radius = 58.142853
@@ -69,38 +71,6 @@ position = Vector2(-2.3841858e-07, 8.571426)
 shape = SubResource("CapsuleShape2D_p2v67")
 debug_color = Color(0.9459217, 4.813075e-06, 0.59021384, 0.42)
 
-[node name="HealthIndicator" type="ProgressBar" parent="." unique_id=96360253]
-z_index = 2
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = -362.85712
-offset_right = 40.0
-offset_bottom = -242.85712
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.5, 1.5)
-max_value = 1000.0
-step = 0.1
-value = 1000.0
-rounded = true
-fill_mode = 3
-show_percentage = false
-
-[node name="HealthLabel" type="Label" parent="HealthIndicator" unique_id=289403115]
-layout_mode = 0
-offset_left = 17.142859
-offset_top = 41.90475
-offset_right = 73.14286
-offset_bottom = 90.904755
-scale = Vector2(1.6, 1.6)
-text = "Health!"
-label_settings = ExtResource("4_15yws")
-metadata/_edit_use_anchors_ = true
-
 [node name="DirectionSensor" type="Node2D" parent="." unique_id=1649939369]
 
 [node name="Bounce" type="AudioStreamPlayer2D" parent="." unique_id=882230172]
@@ -116,3 +86,31 @@ texture = ExtResource("3_yg8pl")
 [node name="Player" type="AnimationPlayer" parent="." unique_id=331847180]
 libraries/ = SubResource("AnimationLibrary_yg8pl")
 autoplay = &"idle"
+
+[node name="HealthIndicator" type="TextureProgressBar" parent="." unique_id=1877205661]
+offset_left = -131.42857
+offset_top = -437.14285
+offset_right = 91.57143
+offset_bottom = -224.14285
+scale = Vector2(1.2, 1.2)
+max_value = 1000.0
+value = 1000.0
+fill_mode = 3
+texture_under = ExtResource("5_yg8pl")
+texture_progress = ExtResource("6_15yws")
+
+[node name="HealthLabel" type="Label" parent="HealthIndicator" unique_id=1181662785]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08968613
+anchor_top = 0.24592005
+anchor_right = 0.08968613
+anchor_bottom = 0.2459201
+offset_left = 17.142859
+offset_top = 41.90475
+offset_right = 73.14286
+offset_bottom = 90.904755
+scale = Vector2(2.7, 2.7)
+text = "Health!"
+label_settings = ExtResource("4_15yws")
+metadata/_edit_use_anchors_ = true
